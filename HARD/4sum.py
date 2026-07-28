@@ -13,25 +13,26 @@
 #                     ans.add(tuple(temp))
 # print(ans)
 # better solution 
-n = int(input())
-arr = list(map(int,input().split()))
-ans = set()
-for i in range(n):
-    for j in range(i+1,n):
-        hashset = set()
-        for k in range(j+1,n):
-            fourth = -(arr[i]+arr[j]+arr[k])
-            if fourth in hashset:
-                temp = [arr[i],arr[j],arr[k],fourth]
-                temp.sort()
-                ans.add(tuple(temp))
-            hashset.add(arr[k])
-print(ans)
+# n = int(input())
+# arr = list(map(int,input().split()))
+# ans = set()
+# for i in range(n):
+#     for j in range(i+1,n):
+#         hashset = set()
+#         for k in range(j+1,n):
+#             fourth = -(arr[i]+arr[j]+arr[k])
+#             if fourth in hashset:
+#                 temp = [arr[i],arr[j],arr[k],fourth]
+#                 temp.sort()
+#                 ans.add(tuple(temp))
+#             hashset.add(arr[k])
+# print(ans)
 # optimal solution
 n = int(input())
 arr = list(map(int,input().split()))
 target = int(input())
 arr.sort()
+ans = []
 for i in range(n):
     if i>0 and arr[i] == arr[i-1]:
         continue
