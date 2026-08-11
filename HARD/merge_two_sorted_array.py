@@ -59,9 +59,9 @@ while gap>0:
     right = gap+left
     while length>right:
         if left>=n:
-            if arr2[left-n]>arr2[right-n]:
+            if arr2[left-n]<arr2[right-n]:
                 arr2[left-n],arr2[right-n] = arr2[right-n],arr2[left-n]
-        elif left<n and right<=n:
+        elif left<n and right>=n:
             if arr1[left]<arr2[right-n]:
                 arr1[left],arr2[right-n] = arr2[right-n],arr1[left]
         else:
